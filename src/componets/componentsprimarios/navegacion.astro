@@ -1,0 +1,14 @@
+---
+import BarraNav from "./barraNav.astro";
+
+---
+
+<div id="menu" class="fixed hidden inset-0 bg-gradient-to-b from-white/70 to-black/70  transition  duration-500  md:static md:translate-x-0 md:bg-none md:block md:px-10">
+  <ul class="absolute inset-x-0 top-24 p-12 bg-white w-[90%] mx-auto rounded-md h-max text-center grid gap-6 shadow-2xl md:w-max md:bg-transparent md:p-0 md:grid-flow-col md:static ">
+   <BarraNav href="/">inicio</BarraNav>
+   <BarraNav href="/store">tienda</BarraNav>
+   <BarraNav href="/about">nosotros</BarraNav>
+   <BarraNav href="/contacto">contacto</BarraNav>
+   
+  </ul>
+</div>

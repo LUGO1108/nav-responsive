@@ -1,0 +1,36 @@
+---
+import Navegacion from "../componentsprimarios/navegacion.astro"
+
+---
+<nav class="h-20 flex w-[90%] mx-auto overflow-hidden max-w-screen-xl items-center justify-between">
+    <a class="w-1/3 max-w-[140px] text-2xl font-bold px-10 uppercase hover:text-3xl hover:text-gray-500" href="/">logo</a>
+   
+    <Navegacion/>
+    <div id="boton" class="mr-6 md:hidden cursor-pointer z-50 ">
+        <img id="icono-menu" src="menu-line.svg" alt="icono menu" />
+        <img id="icono-cerrar" class="hidden" id="close" src="close-fill.svg" alt="icono cerrar" />
+        
+      </div> 
+    
+</nav>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const boton = document.querySelector("#boton");
+        const menu = document.querySelector("#menu");
+        const iconoMenu = document.querySelector("#icono-menu");
+        const iconoCerrar = document.querySelector("#icono-cerrar");
+
+        if (boton && menu && iconoMenu && iconoCerrar) {
+            boton.addEventListener("click", () => {
+                console.log("me diste click");
+                menu.classList.toggle("hidden");
+
+                // Cambiar entre el icono de menú y el de cerrar
+                iconoMenu.classList.toggle("hidden");
+                iconoCerrar.classList.toggle("hidden");
+            });
+        } else {
+            console.error("Alguno de los elementos no fue encontrado.");
+        }
+    });
+</script>
